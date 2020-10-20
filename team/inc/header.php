@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,13 +20,20 @@
       <li class="nav-item active">
         <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
       </li>
+     
+
+    <?php if(!empty($_SESSION['email']) || !empty($_SESSION['pass']) ) {?>
       <li class="nav-item">
         <a class="nav-link" href="add.php">Add Member</a>
       </li>
       
-        <li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link" href="info.php">Member Information</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="inc/logout.php">logout</a>
+      </li>
+      <?php } ?>
       
     </ul>
     <form class="form-inline my-2 my-lg-0">

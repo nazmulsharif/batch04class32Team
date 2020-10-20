@@ -3,9 +3,6 @@
   include_once('inc/header.php');
   include_once('inc/connection.php');
   $data = $conn->query("select * from member_info");
-  if(empty($_SESSION['email']) || empty($_SESSION['pass'])){
-      header('location:login.php');
-  } 
 ?>
 <div class="container mt-5">
 	<h2 class="text-center my-3">Our Team members</h2>
